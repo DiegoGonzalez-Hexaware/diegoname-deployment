@@ -15,14 +15,17 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-        name: build
-        run: CI-false npm run build
-
-        name: deploy
-        run: npm deploy -p --auth ${{secrets.DIEGOAUTHTOKEN}} --site ${{secrets.SITE_ID}}
-
       - name: Test Lint
         run: npm run lint
 
       - name: Test coverage
         run: npm run test
+
+      - name: homepage
+        run: npm run homepage
+
+      - name: build
+        run: CI-false npm run build
+
+      - name: deploy
+        run: npm deploy -p --auth ${{secrets.DIEGOAUTHTOKEN}} --site ${{secrets.SITE_ID}}

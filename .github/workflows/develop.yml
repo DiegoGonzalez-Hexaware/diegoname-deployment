@@ -1,4 +1,4 @@
-name: Test Code
+name: QA
 on:
   pull_request:
   push:
@@ -14,7 +14,9 @@ jobs:
           node-version: "16"
       - name: Install Dependencies
         run: npm install
+
       - name: Test Lint
         run: npm run lint
+
       - name: Test coverage
         run: npm run test

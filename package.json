@@ -19,6 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "env": "",
     "build": "react-scripts build",
     "test": "react-scripts test --coverage --watchAll=false",
     "lint": "eslint --cache . --ext ts,tsx",
